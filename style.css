@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  background: #0b0d12;
+  color: #f4f0e6;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+#wrap {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  image-rendering: pixelated;
+  background: #12151c;
+  cursor: none;
+}
+
+#hud {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  top: 16px;
+  pointer-events: none;
+}
+
+#hp-wrap,
+#xp-wrap {
+  height: 14px;
+  border: 2px solid #1a1d26;
+  background: #0b0d12;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+#hp-bar {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #c0392b, #e74c3c);
+}
+
+#xp-wrap {
+  height: 8px;
+}
+
+#xp-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #f1c40f, #f39c12);
+}
+
+#stats {
+  display: flex;
+  gap: 18px;
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 0 #000;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 10, 14, 0.82);
+  text-align: center;
+  gap: 14px;
+  padding: 24px;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+h1 {
+  font-size: clamp(36px, 6vw, 64px);
+  letter-spacing: 0.08em;
+  color: #f1c40f;
+  text-shadow: 0 4px 0 #7a3b0e;
+}
+
+h2 {
+  font-size: 40px;
+  color: #f1c40f;
+}
+
+.tag {
+  color: #d0c8b4;
+  font-size: 18px;
+}
+
+.how {
+  color: #8d8a82;
+  line-height: 1.5;
+}
+
+button {
+  margin-top: 10px;
+  border: 0;
+  background: #c0392b;
+  color: #fff;
+  font-size: 20px;
+  padding: 12px 28px;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  box-shadow: 0 4px 0 #7a1f16;
+}
+
+button:hover {
+  background: #e74c3c;
+}
+
+#choices {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 900px;
+}
+
+.choice {
+  width: 220px;
+  background: #1c212c;
+  border: 2px solid #f1c40f;
+  padding: 16px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.choice:hover {
+  background: #2a3140;
+}
+
+.choice h3 {
+  color: #f1c40f;
+  margin-bottom: 6px;
+}
+
+.choice p {
+  color: #cfc8b8;
+  font-size: 14px;
+  line-height: 1.35;
+}

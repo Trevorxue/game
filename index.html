@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evade Paying Taxes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <canvas id="game" width="1280" height="720"></canvas>
+
+      <div id="hud">
+        <div id="hp-wrap"><div id="hp-bar"></div></div>
+        <div id="xp-wrap"><div id="xp-bar"></div></div>
+        <div id="stats">
+          <span id="timer">0:00</span>
+          <span id="kills">Loot: $0</span>
+          <span id="level">Lv 1</span>
+        </div>
+      </div>
+
+      <div id="start" class="overlay">
+        <h1>EVADE PAYING TAXES</h1>
+        <p class="tag">You are a robber. The feds want their cut.</p>
+        <p class="how">
+          WASD / arrows to move · weapons fire automatically<br />
+          Survive waves of cops, FBI, CIA, and the IRS
+        </p>
+        <button id="play">Start the heist</button>
+      </div>
+
+      <div id="levelup" class="overlay hidden">
+        <h2>LEVEL UP</h2>
+        <p class="tag">Pick an upgrade</p>
+        <div id="choices"></div>
+      </div>
+
+      <div id="over" class="overlay hidden">
+        <h1>CAUGHT</h1>
+        <p id="over-stats"></p>
+        <button id="retry">Try another heist</button>
+      </div>
+    </div>
+    <script src="game.js"></script>
+  </body>
+</html>
